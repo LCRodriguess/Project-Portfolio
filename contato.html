@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- =========================
+        Cabeçalho e Navegação
+        ========================= -->
+  <header class="cabecalhoContato">
+    <h1 class="tituloContato">Fale Comigo</h1>
+    <nav class="navegacaoContato">
+      <a class="linkNavegacao" href="index.html">Sobre mim</a>
+      <a class="linkNavegacao" href="formacao.html">Formação</a>
+      <a class="linkNavegacao" href="portfolio.html">Portfólio</a>
+      <a class="linkNavegacao" href="contato.html">Contato</a>
+    </nav>
+    <!-- Notificação de envio de e-mail -->
+    <div id="notificacao" class="notificacao oculta"></div>
+  </header>
+
+    <!-- =========================
+         Formulário de Contato
+         ========================= -->
+  <main class="principalContato">
+    <h2 class="tituloSecaoContato">Formulário de Contato</h2>
+      <form id="formContato" class="formularioContato">
+        <label for="nome" class="rotuloFormulario">Nome:</label>
+        <input type="text" id="nome" name="nome" class="entradaFormulario" required>
+          
+        <label for="email" class="rotuloFormulario">Email:</label>
+        <input type="email" id="email" name="email" class="entradaFormulario" required>
+          
+        <label for="assunto" class="rotuloFormulario">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" class="entradaFormulario" required>
+
+        <label for="mensagem" class="rotuloFormulario">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" class="textareaFormulario" required></textarea>
+          
+        <button type="submit" class="botaoFormulario">Enviar</button>
+    </form>
+  </main>
+
+  <!-- =========================
+        Rodapé
+        ========================= -->
+  <footer class="rodapeContato">
+    <p class="footerText">&copy; 2025 - Leonardo C. Rodrigues</p>
+  </footer>
+
+  <!-- =========================
+        Scripts
+        ========================= -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

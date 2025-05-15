@@ -1,0 +1,460 @@
+/* =========================
+   RESET & BASE - PADRÃO PROJETO
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   Cabeçalhos por página
+   ========================= */
+.cabecalhoSobreMim,
+.cabecalhoFormacao,
+.cabecalhoPortfolio,
+.cabecalhoContato {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #5a67d8;
+}
+
+.tituloSobreMim,
+.tituloFormacao,
+.tituloPortfolio,
+.tituloContato {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   Navegação
+   ========================= */
+.navegacaoSobreMim,
+.navegacaoFormacao,
+.navegacaoPortfolio,
+.navegacaoContato {
+    margin-top: 15px;
+}
+
+.linkNavegacao {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.linkNavegacao::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.linkNavegacao:hover::after {
+    width: 100%;
+}
+
+.linkNavegacao:hover {
+    color: #edf2f7;
+}
+
+/* =========================
+   Conteúdo principal por página
+   ========================= */
+.principalSobreMim,
+.principalFormacao,
+.principalPortfolio,
+.principalContato {
+    max-width: 900px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   Títulos das seções por página
+   ========================= */
+.tituloSecaoSobreMim,
+.tituloSecaoFormacao,
+.tituloSecaoPortfolio,
+.tituloSecaoContato,
+.tituloHabilidades {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4a5568;
+    border-left: 6px solid #5a67d8;
+    padding-left: 15px;
+}
+
+/* =========================
+   Habilidades e techTag
+   ========================= */
+.habilidades {
+    margin-top: 30px;
+}
+
+.categoriaHabilidade {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+}
+
+.categoriaHabilidade h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4a5568;
+    border-left: 6px solid #5a67d8;
+    padding-left: 15px;
+}
+
+.containerTagsTecnologia {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tagTecnologia {
+    background: linear-gradient(to right, #c3dafe, #a3bffa);
+    color: #2d3748;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    cursor: default;
+    display: inline-block;
+    user-select: none;
+    margin: 5px 10px 5px 0;
+}
+
+.tagTecnologia:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* =========================
+   Listas de formação e portfólio
+   ========================= */
+.listaFormacao,
+.listaPortfolio {
+    list-style: none;
+    padding-left: 0;
+}
+
+.itemFormacao,
+.itemPortfolio {
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #edf2f7;
+    border-left: 4px solid #667eea;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+.itemFormacao a,
+.itemPortfolio a {
+    color: #5a67d8;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.itemPortfolio a:before {
+    content: "📁";
+    margin-right: 8px;
+    color: #5a67d8;
+}
+
+.itemFormacao a:hover,
+.itemPortfolio a:hover {
+    color: #5a67d8;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+.itemPortfolio p {
+    font-size: 1.01em;
+    color: #4a5568;
+    line-height: 1.4;
+    padding: 10px;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    cursor: default;
+    display: block;
+    user-select: none;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   Formulário de contato
+   ========================= */
+.formularioContato {
+    display: flex;
+    flex-direction: column;
+}
+
+.rotuloFormulario {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #4a5568;
+}
+
+.entradaFormulario,
+.textareaFormulario {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.entradaFormulario:focus,
+.textareaFormulario:focus {
+    border-color: #5a67d8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* Botão do formulário */
+.botaoFormulario {
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botaoFormulario:hover {
+    background: linear-gradient(to right, #5a67d8, #6b46c1);
+    transform: scale(1.02);
+}
+
+.botaoFormulario:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Notificação moderna
+   ========================= */
+.notificacao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notificacao.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notificacao.oculta {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.notificacao::before {
+    content: "✔️";
+    font-size: 1.3em;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+/* =========================
+   Rodapé por página
+   ========================= */
+.rodapeSobreMim,
+.rodapeFormacao,
+.rodapePortfolio,
+.rodapeContato {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #f7fafc;
+    border-top: 1px solid #e2e8f0;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+/* =========================
+   Sobre mim - descrição
+   ========================= */
+.descricaoSobreMim {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+/* =========================
+   Social Links
+   ========================= */
+.linksSociais {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4faff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+    font-size: 1.1em;
+    color: #4a5568;
+    transition: all 0.3s ease;
+    cursor: default;
+    display: block;
+    user-select: none;
+}
+
+.linksSociais h3 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.listaLinks {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.listaLinks li a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.listaLinks li a:hover {
+    color: #004d99;
+}
+
+/* =========================
+   Avisos e warnings
+   ========================= */
+.caixaAviso {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.avisoDisclaimer {
+    max-width: 100%;
+    background: linear-gradient(to right, #edf2f7, #a3bffa);
+    color: #2d3748;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    cursor: default;
+    display: inline-block;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.avisoDisclaimer::before {
+    content: "⚠️";
+    margin-right: 5px;
+    color: #b7791f;
+    opacity: 0.7;
+    font-size: 0.9em;
+}
+
+.avisoDisclaimer:hover {
+    transform: scale(1.02);
+    background: linear-gradient(to right, #ec5d75, #813838);
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    opacity: 1;
+}
+
+/* =========================
+   Responsividade
+   ========================= */
+@media (max-width: 600px) {
+    .linkNavegacao {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .tituloSobreMim,
+    .tituloFormacao,
+    .tituloPortfolio,
+    .tituloContato {
+        font-size: 1.8em;
+    }
+
+    .principalSobreMim,
+    .principalFormacao,
+    .principalPortfolio,
+    .principalContato {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .habilidades {
+        margin-top: 20px;
+    }
+
+    .tagTecnologia {
+        margin-bottom: 10px;
+    }
+}
